@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LINK FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Cartão de Crédito</title>
+</head>
+<body>
+    
+    <main class="main">
+        <div id="container">
+            <div id="content">
+                <div class="content__creditCard">
+
+                    <div class="content__bgCard">
+                        <img src="assets/img/bg-creditCard.jpg" alt="Imagem de um cartão de crédito">
+    
+                        <div class="content__elementsCard">
+                            
+                            <div class="content__iconTop">
+                                <img src="assets/img/iconeVisa.svg" alt="Icone Visa">
+                                <img src="assets/img/iconApproximation.svg" alt="Icone aproximação cartão">
+                            </div>
+
+                            <div class="content__numbersCard">
+                                <strong id="cardNumber">**** **** **** ****</strong>
+                            </div>
+
+                            <div class="content__yourNameHere">
+                                <span id="cardName">Seu nome aqui</span>
+                                <div class="content__validityCard">
+                                    <span id="cardValidity">**/**</span>
+                                    <div class="content__cvv">
+                                        <span id="cardCVV">123</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <form class="content__formFields">
+    
+                    <div class="content__field1">
+                        <label for="number">Número do cartão</label>
+                        <input type="text" name="number" id="number" placeholder="4716 8039 0223 2323" required maxlength="19" 
+                        
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+    
+                    <div class="content__field2">
+                        <label for="name">Nome do titular</label>
+                        <input type="text" name="name" id="name" placeholder="Nome como está no cartão" required maxlength="20" autocomplete="off"
+                        
+                        onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.key == ' '">
+                    </div>
+    
+                    <div class="content__field3">
+                        <div class="content__validity">
+                            <label for="validity">Validade</label>
+                            <input type="text" name="date" id="validity" placeholder="mm/aa" required maxlength="5"
+                            
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                        </div>
+                        <div class="content__numberCVV">
+                            <label for="numberCVV">CVV <img src="assets/img/iconInterrog.svg" alt="">
+                            </label>
+                            <input type="text" name="numberCVV" id="numberCVV" placeholder="***" required maxlength="3"
+                            
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                        </div>
+                    </div>
+    
+
+                    <div class="content__addCard">
+                        <button type="submit" id="btnSubmit">Adicionar cartão</button>
+                    </div>
+                </form>
+                
+            </div>
+
+            <div class="content__dataSecurity">
+                <img src="assets/img/iconSecurity.svg" alt="Icone de chave de segurança">
+                <span>Seus dados estão seguros</span>
+            </div>
+
+            
+        </div>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
